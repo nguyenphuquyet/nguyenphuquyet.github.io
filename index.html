@@ -29,6 +29,22 @@
     <!--/ @CDN /-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.min.css">
     <link rel="stylesheet" href="./res/v5/css/ws.toast.css">
+        <script>
+            // Ngăn chặn chuột phải
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // Ngăn chặn các phím tắt
+    document.onkeydown = function(e) {
+        if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 'i' || e.key === 'I')) {
+            return false;
+        }
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+        return false;
+        }
+    };
+        </script
 </head>
 <body class="BodyStyle">
     <div class="td-lock-screen">
