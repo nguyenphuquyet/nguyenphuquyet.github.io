@@ -294,7 +294,11 @@ messages.forEach(msg => {
             }, 200);
         }
     });
-
+    //- @Activite Menu -//
+    if (GetCookie("SettingPanelShown") !== "true") {
+        $("#SettingPanel").addClass("open"); // Tự động mở bảng setting nếu trong 1 ngày họ vào trang web lần đầu tiên
+        document.cookie = "SettingPanelShown=true; max-age=" + (60 * 60 * 24) + "; path=/";
+    }
     //- @Nhấn Để Mở Menu Setting -//
     $(".toggle").click(function() {
         $("#SettingPanel").toggleClass("open");
