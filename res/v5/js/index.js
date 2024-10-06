@@ -626,7 +626,7 @@ messages.forEach(msg => {
         setTimeout(function(){ x.removeClass('show'); }, 5000);
     }      
     var x = $('#Toast');
-    x.html('- Nhấn Để Mở Khóa | 按下解锁 -');
+    x.html('Nhấn Để Mở Khóa | 按下解锁');
     //- @Hiện/Ẩn Loader Screen Thông Minh-//
     const LoadingPercentage = $('#loading-percentage');
     let LoadingPercentageTimer;
