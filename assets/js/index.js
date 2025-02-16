@@ -63,7 +63,7 @@
     }),
     $("body").on("click", ".confirm-btn", function () {
       !(function n() {
-        fetch("https://quyetdz210.x10.mx/api/nhac-ngau-nhien.php")
+        fetch("../api/nhac-ngau-nhien.php")
           .then((n) => n.json())
           .then((t) => {
             let e = t.musicUrl,
@@ -225,7 +225,7 @@
   }
   function y() {
     $.ajax({
-      url: "https://quyetdz210.x10.mx/api/chamngon.php",
+      url: "../api/chamngon.php",
       type: "get",
       dataType: "json",
       success: function (n) {
