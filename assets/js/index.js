@@ -63,7 +63,7 @@
     }),
     $("body").on("click", ".confirm-btn", function () {
       !(function n() {
-        fetch("../api/nhac-ngau-nhien.php")
+        fetch("https://api.quyetdz210.x10.mx/nhac-ngau-nhien.php")
           .then((n) => n.json())
           .then((t) => {
             let e = t.musicUrl,
