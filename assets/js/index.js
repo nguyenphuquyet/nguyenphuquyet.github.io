@@ -225,7 +225,7 @@
   }
   function y() {
     $.ajax({
-      url: "../api/chamngon.php",
+      url: "https://api.quyetdz210.x10.mx/chamngon.php",
       type: "get",
       dataType: "json",
       success: function (n) {
