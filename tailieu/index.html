@@ -24,6 +24,20 @@
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .download-btn {
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .download-btn:hover {
+            background-color: #005f73;
         }
     </style>
 </head>
@@ -40,6 +54,15 @@
         files.forEach(file => {
             const li = document.createElement("li");
             li.textContent = file;
+
+            const downloadBtn = document.createElement("button");
+            downloadBtn.textContent = "Tải Xuống";
+            downloadBtn.className = "download-btn";
+            downloadBtn.onclick = () => {
+                window.location.href = file;
+            };
+
+            li.appendChild(downloadBtn);
             list.appendChild(li);
         });
     </script>
