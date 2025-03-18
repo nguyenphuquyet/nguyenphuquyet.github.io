@@ -32,21 +32,15 @@
     <ul id="file-list"></ul>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            if (window.showOpenFilePicker) {
-                window.showDirectoryPicker()
-                    .then(async (dirHandle) => {
-                        const list = document.getElementById("file-list");
-                        for await (const entry of dirHandle.values()) {
-                            const li = document.createElement("li");
-                            li.textContent = entry.name;
-                            list.appendChild(li);
-                        }
-                    })
-                    .catch(error => console.error("Lỗi:", error));
-            } else {
-                alert("Trình duyệt không hỗ trợ tính năng này.");
-            }
+        const files = [
+            "TaiChinhGiaDinh.xlsx",
+        ];
+
+        const list = document.getElementById("file-list");
+        files.forEach(file => {
+            const li = document.createElement("li");
+            li.textContent = file;
+            list.appendChild(li);
         });
     </script>
 </body>
